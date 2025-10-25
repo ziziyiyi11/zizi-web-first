@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人账单</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="test.js"></script>
+</head>
+<body>
+    <div>
+        <h1>个人账单</h1>
+        
+        <div>姓名：陈思浩</div>
+        
+        <h2>欠费明细</h2>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th width="10%";align="center">序号</th>
+                    <th width="30%">金额</th>
+                    <th width="60%">备注</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="amount">15,000 元</td>
+                    <td align="center">日本吵架弥补包包</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="amount">3,000 元</td>
+                    <td align="center">生活费</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="amount">1000 元</td>
+                    <td align="center">吃饭</td>
+                </tr>
+            </tbody>
+        </table>
+    
+<div class="controls">
+<button id="calculateBtn">总计</button>
+</div>
+
+<div id="total">
+    <h2>总计: <span id="totalAmount">0</span> 元</h2>
+</div>
+
+ <!-- 弹窗模态框 -->
+        <div id="totalModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <input type="text" id="totalInput" readonly>
+                
+            </div>
+        </div>
+
+        <div>
+            <p>这是zizi第一次做网页的作品</p>
+        </div>
+        
+        <div>
+            账单生成日期：2023年10月15日
+        </div>
+    </div>
+</body>
+</html>
