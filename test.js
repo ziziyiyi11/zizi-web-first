@@ -4,7 +4,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // 获取按钮元素
   const calculateBtn = document.getElementById("calculateBtn");
-  const modal = document.getElementById("totalModal");
   const totalInput = document.getElementById("totalInput");
   const closeBtn = document.querySelector(".close");
   const totalAmountSpan = document.getElementById("totalAmount");
@@ -16,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const month = String(targetDate.getMonth() + 1).padStart(2, "0");
   const day = String(targetDate.getDate()).padStart(2, "0");
   billDate.textContent = `账单生成日期：${year}年${month}月${day}日`;
+
+  // 获取模态框
+  const modal = document.getElementById("myModal");
+  // 获取 <span> 元素，用于关闭模态框
+  const span = document.getElementsByClassName("close")[0];
 
   // 计算总计按钮点击事件
   calculateBtn.addEventListener("click", function () {
@@ -30,12 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
       total += amount; // total = total + amount
     });
 
-    // 更新总计显示
-    const formattedTotal = total.toLocaleString();
-    totalAmountSpan.textContent = formattedTotal;
+    // 得到总计字符串
+    const totalString = total.toLocaleString();
 
-    // 设置弹窗中的输入框值并显示弹窗
-    totalInput.value = formattedTotal + " 元";
+    //改modal total显示内容
+    const zongji = document.getElementById("he");
+    zongji.textContent = "陈思浩应该还zizi：" + totalString + "元";
+
+    //改block让modal显示出来
     modal.style.display = "block";
   });
 
