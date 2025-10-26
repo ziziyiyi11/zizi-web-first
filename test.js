@@ -53,4 +53,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     modal.style.display = 'none';
                 }
             });
-})
+      
+   
+            
+
+
+	    // 1. 获取所有带有 'amount' 类的单元格
+	    const amountCells = document.querySelectorAll('.amount');
+	    // 2. 遍历每个单元格并添加事件监听器
+	    amountCells.forEach(cell => {
+	        const originalColor = cell.style.backgroundColor;
+            
+            // 鼠标悬浮事件
+	        cell.addEventListener('mouseover', function() {
+	            // 'this' 指代当前触发事件的单元格 (e.g., <td class="amount">...</td>)
+	            // 'this.parentElement' 指代其父元素，也就是 <tr>
+	            // 然后给 <tr> 添加 'highlight-row' 类
+	            cell.style.backgroundColor='#d22774ff';
+	        });
+	        // 鼠标移出事件
+	        cell.addEventListener('mouseout', function() {
+	            // 同样，找到父元素 <tr> 并移除 'highlight-row' 类
+	            cell.style.backgroundColor= originalColor;
+	        });
+	    });
+});
