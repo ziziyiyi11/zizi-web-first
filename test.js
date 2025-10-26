@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const totalInput = document.getElementById('totalInput');
             const closeBtn = document.querySelector('.close');
             const totalAmountSpan = document.getElementById('totalAmount');
+    // 设置账单日期为当前日期的3天后
+        const billDate = document.getElementById('billDate');
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 3);
+        const year = targetDate.getFullYear();
+        const month = String(targetDate.getMonth() + 1).padStart(2, '0');
+        const day = String(targetDate.getDate()).padStart(2, '0');
+        billDate.textContent = `账单生成日期：${year}年${month}月${day}日`;
+    
     
     // 计算总计按钮点击事件
     calculateBtn.addEventListener('click', function() {
