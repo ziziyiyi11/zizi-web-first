@@ -39,6 +39,12 @@
                     <td class="amount">1000 元</td>
                     <td align="center">吃饭</td>
                 </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td class="amount">1000 元</td>
+                    <td align="center"> 购物</td>
+                </tr>
             </tbody>
         </table>
     
@@ -46,26 +52,23 @@
 <button id="calculateBtn">总计</button>
 </div>
 
-<div id="total">
-    <h2>总计: <span id="totalAmount">0</span> 元</h2>
+	<!-- 模态框 HTML -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="he">这是一个使用 CSS 和 JavaScript 创建的模态框。它不会打开新窗口，用户体验更好。</p>
+  </div>
 </div>
 
- <!-- 弹窗模态框 -->
-        <div id="totalModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                
-                <input type="text" id="totalInput" readonly>
-                
-            </div>
-        </div>
 
         <div>
             <p>这是zizi第一次做网页的作品</p>
         </div>
         
-        <div>
+        <div id="billDate">
+            
             账单生成日期：2023年10月15日
+            
         </div>
     </div>
 </body>
